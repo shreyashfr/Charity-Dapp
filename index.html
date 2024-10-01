@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decentralized Charity Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Decentralized Charity Platform</h1>
+    
+    <button id="connectWallet">Connect Wallet</button>
+    <button id="disconnectWallet" style="display:none;">Disconnect Wallet</button>
+
+    <h2>Register Charity</h2>
+    <input type="text" id="charityName" placeholder="Charity Name">
+    <input type="text" id="charityDescription" placeholder="Charity Description">
+    <input type="number" id="charityGoal" placeholder="Goal Amount (in ETH)">
+    <button onclick="registerCharity()">Register Charity</button>
+
+    <h2>Donate to Charity</h2>
+    <input type="number" id="charityId" placeholder="Charity ID">
+    <input type="number" id="donationAmount" placeholder="Donation Amount (in ETH)">
+    <button onclick="donate()">Donate</button>
+
+    <h2>Get Charity Details</h2>
+    <input type="number" id="getCharityId" placeholder="Charity ID">
+    <button onclick="getCharityDetails()">Get Details</button>
+    <div id="charityDetails"></div>
+
+    <div id="status"></div>
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
